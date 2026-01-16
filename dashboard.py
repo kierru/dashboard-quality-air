@@ -298,9 +298,3 @@ corr = filtered_df[corr_cols].corr()
 fig_corr, ax = plt.subplots(figsize=(10, 6))
 sns.heatmap(corr, annot=True, cmap="coolwarm", ax=ax)
 st.pyplot(fig_corr)
-
-# ==================================================
-# RAW DATA
-# ==================================================
-with st.expander("📄 View Raw Data"):
-    st.dataframe(filtered_df)
