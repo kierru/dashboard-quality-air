@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 from pathlib import Path
+import os
+
+st.write("Files in app root:", os.listdir())
 
 # --------------------------------------------------
 # Page Configuration
