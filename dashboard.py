@@ -20,6 +20,7 @@ st.set_page_config(
 def load_data():
     url = "https://drive.google.com/uc?export=download&id=1ZKY29C9Dg-ic2tqkzikiE34SMUCcKsUt"
 
+
     df = pd.read_csv(url)
 
     # 🔥 Rebuild datetime to FIX 2013 issue
