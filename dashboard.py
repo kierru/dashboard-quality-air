@@ -3,10 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-from pathlib import Path
-import os
-
-st.write("Files in app root:", os.listdir())
 
 # --------------------------------------------------
 # Page Configuration
@@ -22,9 +18,7 @@ st.set_page_config(
 # --------------------------------------------------
 @st.cache_data
 def load_data():
-    BASE_DIR = Path(__file__).resolve().parent
-    csv_path = BASE_DIR / "main.csv"
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv("main.csv")
 
     # 🔥 Rebuild datetime to FIX 2013 issue
     df["datetime"] = pd.to_datetime(
