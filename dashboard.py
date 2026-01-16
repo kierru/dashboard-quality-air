@@ -18,7 +18,9 @@ st.set_page_config(
 # --------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main.csv")
+    BASE_DIR = Path(__file__).resolve().parent
+    csv_path = BASE_DIR / "main.csv"
+    df = pd.read_csv(csv_path)
 
     # 🔥 Rebuild datetime to FIX 2013 issue
     df["datetime"] = pd.to_datetime(
