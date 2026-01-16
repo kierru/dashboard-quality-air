@@ -18,8 +18,7 @@ st.set_page_config(
 # --------------------------------------------------
 @st.cache_data(show_spinner="Loading air quality data from Google Drive...")
 def load_data():
-    url = "https://drive.google.com/uc?export=download&id=1ZKY29C9Dg-ic2tqkzikiE34SMUCcKsUt",
-    low_memory=False
+    url = "https://drive.google.com/uc?export=download&id=1ZKY29C9Dg-ic2tqkzikiE34SMUCcKsUt"
 
     df = pd.read_csv(url)
 
