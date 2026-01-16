@@ -16,9 +16,12 @@ st.set_page_config(
 # --------------------------------------------------
 # Load & Clean Data
 # --------------------------------------------------
-@st.cache_data
+@st.cache_data(show_spinner="Loading air quality data from Google Drive...")
 def load_data():
-    df = pd.read_csv("main.csv")
+    url = "https://drive.google.com/uc?export=download&id=1ZKY29C9Dg-ic2tqkzikiE34SMUCcKsUt",
+    low_memory=False
+
+    df = pd.read_csv(url)
 
     # 🔥 Rebuild datetime to FIX 2013 issue
     df["datetime"] = pd.to_datetime(
