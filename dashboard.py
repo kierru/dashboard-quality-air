@@ -18,7 +18,7 @@ st.set_page_config(
 # --------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("dashboard/main.csv")
+    df = pd.read_csv("main.csv")
 
     # 🔥 Rebuild datetime to FIX 2013 issue
     df["datetime"] = pd.to_datetime(
